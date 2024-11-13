@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaspa Portfolio Tracker</title>
+    <style>
+        /* Kaspa colors */
+        :root {
+            --kaspa-blue: #1E1F6A;
+            --kaspa-yellow: #F3D700;
+            --kaspa-green: #6fc7ba;
+            /* Kaspa Official Color */
+            --white: #fff;
+            --light-gray: #f7f7f7;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--kaspa-green);
+            /* Kaspa Official Color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: var(--kaspa-blue);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            color: var(--kaspa-blue);
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            text-align: center;
+            background-color: var(--white);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .input-box {
+            margin: 20px 0;
+        }
+
+        input[type="number"] {
+            padding: 12px;
+            width: 100%;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 1.1rem;
+            text-align: right;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--kaspa-yellow);
+            color: var(--kaspa-blue);
+            padding: 12px 20px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d4b100;
+        }
+
+        .result p {
+            font-size: 1.4rem;
+            margin: 12px 0;
+        }
+
+        .result span {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--kaspa-blue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Kaspa Logo from the provided URL -->
+    <img src="https://kaspa.org/wp-content/uploads/2023/08/Kaspa-LDSP-Dark-Full-Color.svg" alt="Kaspa Logo"
+        class="logo">
+
+    <h1>Kaspa Portfolio Tracker</h1>
+
+    <div class="container">
+        <!-- Input for Kaspa Holdings -->
+        <div class="input-box">
+            <label for="kaspaAmount">Enter Kaspa Holdings (KAS):</label>
+            <input type="number" id="kaspaAmount" placeholder="Amount of Kaspa" />
+            <button id="updatePortfolio">Update Portfolio</button>
+        </div>
+
+        <!-- Display Portfolio Value -->
+        <div class="result">
+            <p>Current Kaspa Price: <span id="kaspaPrice">Loading...</span> USD</p>
+            <p>Portfolio Value: <span id="portfolioValue">0</span> USD</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Powered by Kaspa</p>
+    </div>
+
+    <script src="new-tab.js"></script>
+</body>
+
+</html>

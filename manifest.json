@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Kaspa Portfolio Tracker",
+    "version": "1.0",
+    "description": "Track your Kaspa cryptocurrency portfolio",
+    "chrome_url_overrides": {
+        "newtab": "new-tab.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "content_security_policy": {
+        "script-src": "'self' https://cdn.jsdelivr.net",
+        "object-src": "'self'"
+    },
+    "action": {
+        "default_popup": "new-tab.html"
+    },
+    "host_permissions": [
+        "https://api.coingecko.com/"
+    ]
+}
